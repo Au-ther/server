@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import org.apache.commons.dbutils.DbUtils;
 import org.apache.log4j.Logger;
 
 /**
@@ -35,7 +36,7 @@ public class FileDAOByMysql implements FileDAO {
         } catch (SQLException e) {
             log.error("查询文件路径失败: " + e.getMessage());
         } finally {
-            DB.close(conn, ps, rs);
+            DbUtils.closeQuietly(conn);
         }
         
         return filePath;
@@ -64,7 +65,7 @@ public class FileDAOByMysql implements FileDAO {
             log.error("添加文件记录失败: " + e.getMessage());
             return false;
         } finally {
-            DB.close(conn, ps, null);
+            DbUtils.closeQuietly(conn);
         }
     }
     
@@ -85,7 +86,7 @@ public class FileDAOByMysql implements FileDAO {
             log.error("增加文件引用计数失败: " + e.getMessage());
             return false;
         } finally {
-            DB.close(conn, ps, null);
+            DbUtils.closeQuietly(conn);
         }
     }
     
@@ -111,7 +112,7 @@ public class FileDAOByMysql implements FileDAO {
             log.error("查询文件是否存在失败: " + e.getMessage());
             return false;
         } finally {
-            DB.close(conn, ps, rs);
+            DbUtils.closeQuietly(conn);
         }
     }
 } 

@@ -32,7 +32,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 	public boolean add(User user) throws Exception {
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "insert into User (qqnum, realname, nickname, sex, age, password, signature, email, photo, state, registerTime,onhours,rsapublic,rsaprivate) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			log.info(sql);
@@ -84,7 +84,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 	public boolean delete(User user) {
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "delete from User where qqnum=?";
 			log.info(sql);
@@ -107,7 +107,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 	public boolean deleteUserFriend(int selfqq, int friendqq) {
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 
 			String sql = "delete from user_friends where selfid=? and friendid=?";
@@ -137,7 +137,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 		Vector<User> v = new Vector<User>();
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "select *  from User";
 			log.info(sql);
@@ -179,7 +179,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "select *  from User where qqnum=?";
 			log.info(sql + ":" + id);
@@ -212,7 +212,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "select *  from User where qqnum=? and nickname=?";
 			log.info(sql + ":" + id);
@@ -245,7 +245,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "select *  from User where nickname like '%" + name + "%'";
 			List<User> pset = (List<User>) qr.query(conn, sql, new BeanListHandler(User.class));
@@ -282,7 +282,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "select *  from User where nickname=?";
 			log.info(sql + ":" + name);
@@ -350,7 +350,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 	public boolean updateUser(User user) {
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			if (user.getPassword() != null && !"".equals(user.getPassword().trim())) {
 				String sql = "update User set realname=?, nickname=?, sex=?, age=?, password=?, signature=?,  photo=? where qqnum=?";
@@ -383,7 +383,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 	public boolean update(User user) throws Exception {
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "update User set realname=?, nickname=?, sex=?, age=?, password=?, signature=?, email=?, photo=?, state=?, registerTime=? where qqnum=?";
 			log.info(sql);
@@ -412,7 +412,7 @@ public class UserDAOByMysql implements DAO<User, Integer> {
 	public boolean updateTime(User user, long time) throws Exception {
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "update User set onhours=onhours+? where qqnum=?";
 			log.info(sql);

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6492597-bad6-4bf8-8ce6-68a49313fcc7" name="更改" comment="" />
+    <list default="true" id="f6492597-bad6-4bf8-8ce6-68a49313fcc7" name="更改" comment="初始化项目">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/dao/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/dao/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/dao/FileDAOByMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/dao/FileDAOByMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/dao/RecordDAOByMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/dao/RecordDAOByMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/dao/UserDAOByMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/dao/UserDAOByMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/生成QQ号.dat" beforeDir="false" afterPath="$PROJECT_DIR$/生成QQ号.dat" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +64,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
+    "project.structure.last.edited": "工件",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "File.Encoding",
@@ -137,12 +144,36 @@
       <workItem from="1745676814444" duration="654000" />
       <workItem from="1746019730425" duration="604000" />
       <workItem from="1746169211222" duration="9877000" />
-      <workItem from="1746188777296" duration="629000" />
+      <workItem from="1746188777296" duration="1941000" />
     </task>
+    <task id="LOCAL-00001" summary="初始化项目">
+      <option name="closed" value="true" />
+      <created>1746189431027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746189431027</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化项目" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

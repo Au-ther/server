@@ -25,7 +25,7 @@ public class RecordDAOByMysql implements DAO<Record, Integer> {
 	public boolean add(Record record) throws Exception {
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			log.info(conn == null);
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "insert into record (fromid, toid, fromName, toName, sendTime, readTime, isRead, content) values(?,?,?,?,?,?,?,?)";
@@ -51,7 +51,7 @@ public class RecordDAOByMysql implements DAO<Record, Integer> {
 		List<Record> list = new ArrayList<>();
 		Connection conn = null;
 		try {
-			conn = DB.getConntion();
+			conn = DB.getConnection();
 			QueryRunner qr = new QueryRunner(true);
 			String sql = "select id, fromid, toid, (select nickname from user as tu where tu.qqnum=tr.fromid) fromName, (select nickname from user as tu where tu.qqnum=tr.toid) toName, sendTime, readTime, isRead, content from Record as tr where (fromid=? and toid=?) or (toid=? and fromid=?) order by sendTime";
 			Object[] ps = new Object[] { fromqq, toqq, fromqq, toqq };
